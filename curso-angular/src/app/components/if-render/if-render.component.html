@@ -1,0 +1,19 @@
+<div class="class">
+  <div>
+    <button id="permitir" (click)="onClick(true)">Permitir</button>
+    <button id="bloquear" (click)="onClick(false)">Bloquear</button>
+  </div>
+  <div *ngIf="canShow; else blocked">Estamos mostrando isso porque foi permitido</div>
+  <ng-template #blocked>
+    <div>Conteúdo bloqueado</div>
+  </ng-template>
+
+  <br>
+  <input (input)="onInputChange()" type="text" id="inputName">
+  <h2 *ngIf=" name !== ''; else nameNotFound">O nome é {{ name }} </h2>
+  <ng-template #nameNotFound>
+    <div>
+      <h2>Nome vazio</h2>
+    </div>
+  </ng-template>
+</div>
