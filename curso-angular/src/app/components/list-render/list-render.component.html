@@ -9,3 +9,16 @@
   </ul>
   <h3>{{ animalDetails }}</h3>
 </div>
+<div class="class">
+  <h2>Pacientes</h2>
+  <ul>
+    <li *ngFor="let paciente of pacientes">
+      Nome: {{ paciente.nome }} //
+      Data de nascimento: {{ paciente.dt_nascimento }} //
+      CPF: {{ paciente.nr_cpf }} //
+      Cidade: {{ paciente.cidade }} //
+      Estado: {{ paciente.estado }} //
+      Situação: {{ getSituacaoPaciente(paciente.ie_situacao) }}
+    </li>
+  </ul>
+</div>
