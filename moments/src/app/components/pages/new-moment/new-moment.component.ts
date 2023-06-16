@@ -6,8 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-moment.component.scss'],
 })
 export class NewMomentComponent implements OnInit {
+  btnText = 'Compartilhar!';
+
   constructor() {}
   ngOnInit(): void {}
 
-  btnText = 'Compartilhar!';
+  createHandler(event: any) {
+    console.log('deu boa');
+  }
 }
