@@ -16,7 +16,8 @@ export class HomeComponent implements OnInit {
   moments: Moment[] = [];
   baseApiUrl = environment.apiUrl;
 
-  // todo search
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   constructor(private momentService: MomentService) {}
   ngOnInit(): void {
@@ -33,4 +34,6 @@ export class HomeComponent implements OnInit {
       this.moments = data;
     });
   }
+
+  search(event: any): void {}
 }
